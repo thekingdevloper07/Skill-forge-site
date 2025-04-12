@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skill Forge - Personalized Learning</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <style>
+    body {
+      background-color: #0e1a24;
+      color: #ffffff;
+    }
+    .grid-courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .course-card {
+      background: #16232e;
+      border-radius: 1rem;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .course-card:hover {
+      transform: scale(1.03);
+    }
+    .buy-btn, .cart-btn {
+      border-radius: 50%;
+      padding: 0.75rem 1rem;
+      margin: 0.25rem;
+    }
+    img {
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
 
+<nav class="container-fluid">
+  <ul>
+    <li><strong>Skill Forge</strong></li>
+  </ul>
+  <ul>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#admin" role="button">Admin</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <div class="grid">
+    <section>
+      <hgroup>
+        <h2>Adaptive Learning Evolved</h2>
+        <h3>Machine learning meets education</h3>
+      </hgroup>
+      <p>Skill Forge revolutionizes learning through AI-driven personalization, progress tracking, and an interactive AI tutor.</p>
+      <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-dFM0qX7Q6Y8Pf5zRLEFRmLsj/user-VjAKjK0v3ucM6wV9YzDZWz6E/img-64okF7CFVwl6pR7QtxWJxfU8.png" alt="Hero Image">
+    </section>
+
+    <section id="features">
+      <h2>AI Tutor & Analytics</h2>
+      <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-dFM0qX7Q6Y8Pf5zRLEFRmLsj/user-VjAKjK0v3ucM6wV9YzDZWz6E/img-J7HdaWj6rcbAJHWf.png" alt="AI Tutor">
+      <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-dFM0qX7Q6Y8Pf5zRLEFRmLsj/user-VjAKjK0v3ucM6wV9YzDZWz6E/img-B5UR62MO0Dx0PAND.png" alt="Analytics Dashboard">
+    </section>
+
+    <section id="courses">
+      <h2>Courses</h2>
+      <div class="grid-courses">
+        <!-- Auto-generated 5 sample courses (repeat for 50+) -->
+        ${Array.from({ length: 10 }).map((_, i) => `
+          <div class="course-card">
+            <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-dFM0qX7Q6Y8Pf5zRLEFRmLsj/user-VjAKjK0v3ucM6wV9YzDZWz6E/img-YAZxIlG26Xc5x5xU.png" alt="Course Thumbnail">
+            <h3>Course ${i + 1}: ${["Python Essentials", "Web Dev Mastery", "AI Basics", "Data Science", "UI/UX Design"][i % 5]}</h3>
+            <p>Learn at your pace with personalized lessons and hands-on projects.</p>
+            <p><strong>Transcript:</strong> Module breakdowns, project walkthroughs, weekly assessments.</p>
+            <button class="buy-btn">Buy</button>
+            <button class="cart-btn">🛒</button>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+
+    <section id="admin">
+      <h2>Admin Panel</h2>
+      <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-dFM0qX7Q6Y8Pf5zRLEFRmLsj/user-VjAKjK0v3ucM6wV9YzDZWz6E/img-cJTgH95OmMwWsjGF.png" alt="Admin Panel UI">
+      <p>Manage users, upload content, monitor performance and more with our admin dashboard.</p>
+    </section>
+  </div>
+</main>
+
+<section aria-label="Subscribe example">
+  <div class="container">
+    <article>
+      <hgroup>
+        <h2>Stay in the loop</h2>
+        <h3>Get updates on new courses and features</h3>
+      </hgroup>
+      <form class="grid">
+        <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required />
+        <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
+        <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+      </form>
+    </article>
+  </div>
+</section>
+
+<footer class="container">
+  <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+</footer>
+
+</body>
+</html>
